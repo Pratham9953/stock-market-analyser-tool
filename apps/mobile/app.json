@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "F&O Backwardation Scanner",
+    "slug": "fo-backwardation-scanner",
+    "scheme": "fo-scanner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "platforms": ["android", "ios", "web"],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["expo-router"],
+    "android": {
+      "package": "ai.gopluto.backwardationscanner"
+    },
+    "ios": {
+      "bundleIdentifier": "ai.gopluto.backwardationscanner"
+    }
+  }
+}

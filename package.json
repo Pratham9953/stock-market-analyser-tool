@@ -1,0 +1,47 @@
+{
+  "name": "fo-backwardation-scanner",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.2.1",
+  "scripts": {
+    "dev": "turbo run dev --parallel --continue --filter=@fo-scanner/api --filter=@fo-scanner/mobile",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rimraf node_modules .turbo",
+    "docker:up": "docker compose up --build -d",
+    "docker:down": "docker compose down -v",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.53.0",
+    "@types/node": "^22.15.30",
+    "eslint": "^9.28.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "turbo": "^2.5.3",
+    "typescript": "^5.8.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,md,yml,yaml}": [
+      "prettier --write"
+    ],
+    "apps/**/*.{ts,tsx}": [
+      "eslint --fix"
+    ],
+    "packages/**/*.{ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "msw",
+      "protobufjs",
+      "unrs-resolver"
+    ]
+  }
+}

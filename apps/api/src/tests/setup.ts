@@ -1,0 +1,17 @@
+process.env.NODE_ENV = 'test';
+process.env.PORT = '3001';
+process.env.LOG_LEVEL = 'silent';
+process.env.APP_BASE_URL = 'http://localhost:3000';
+process.env.FRONTEND_WEB_URL = 'http://localhost:19006';
+process.env.FRONTEND_DEEP_LINK_BASE = 'fo-scanner://auth/upstox-callback';
+process.env.CORS_ORIGIN = 'http://localhost:19006';
+process.env.DATABASE_URL = 'postgres://test:test@localhost:5432/test';
+process.env.APP_JWT_SECRET = 'test-test-test-test-test-test-test-test';
+process.env.TOKEN_ENCRYPTION_SECRET = 'test-token-secret-test-token-secret';
+process.env.UPSTOX_CLIENT_ID = 'client';
+process.env.UPSTOX_CLIENT_SECRET = 'secret';
+process.env.UPSTOX_REDIRECT_URI = 'http://localhost:3000/v1/brokers/upstox/callback';
+process.env.UPSTOX_AUTH_DIALOG_URL = 'https://api.upstox.com/v2/login/authorization/dialog';
+process.env.UPSTOX_TOKEN_URL = 'https://api.upstox.com/v2/login/authorization/token';
+process.env.UPSTOX_MARKET_AUTHORIZE_V3_URL = 'https://api.upstox.com/v3/feed/market-data-feed/authorize';
+process.env.UPSTOX_BOD_INSTRUMENTS_URL = 'https://assets.upstox.com/test.json.gz';

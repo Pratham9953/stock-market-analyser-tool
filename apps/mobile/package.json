@@ -1,0 +1,44 @@
+{
+  "name": "@fo-scanner/mobile",
+  "version": "1.0.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "dev": "expo start --clear",
+    "web": "expo start --web --non-interactive",
+    "build": "expo export -p web --output-dir dist",
+    "lint": "eslint . --ext .ts,.tsx",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "test": "jest --runInBand",
+    "clean": "rimraf dist .expo"
+  },
+  "dependencies": {
+    "@fo-scanner/shared": "workspace:*",
+    "@fo-scanner/ui": "workspace:*",
+    "@tanstack/react-query": "^5.81.5",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "expo": "~55.0.0",
+    "expo-application": "~7.0.7",
+    "expo-linking": "~8.0.9",
+    "expo-router": "~6.0.14",
+    "expo-status-bar": "~3.0.8",
+    "expo-web-browser": "~15.0.8",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-native": "0.83.0",
+    "react-native-safe-area-context": "5.6.2",
+    "react-native-screens": "~4.16.0",
+    "react-native-svg": "15.13.0",
+    "zustand": "^5.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@testing-library/jest-native": "^5.4.3",
+    "@types/react": "^19.1.8",
+    "@types/react-test-renderer": "^19.1.0",
+    "jest": "^30.0.2",
+    "jest-expo": "~55.0.4",
+    "react-test-renderer": "19.1.1",
+    "rimraf": "^6.0.1"
+  }
+}

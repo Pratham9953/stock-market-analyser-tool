@@ -1,0 +1,28 @@
+{
+  "name": "@fo-scanner/testing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "lint": "eslint src --ext .ts,.tsx",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.81.5",
+    "@testing-library/react-native": "^13.2.0",
+    "msw": "^2.10.2",
+    "react": "19.1.0",
+    "react-native": "0.81.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.5.0",
+    "vitest": "^3.2.4"
+  }
+}
